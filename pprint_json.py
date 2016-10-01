@@ -1,6 +1,6 @@
 import json
 
-filepath = input('Введите путь к файлу: ')
+filepath = 'Alco.json'
 
 def load_data(filepath):
     with open (filepath, 'r', encoding='utf-8') as file_handler:
@@ -9,8 +9,8 @@ def load_data(filepath):
 data = load_data(filepath)
 
 def pretty_print_json(data):
-    for elements in data:
-        print((json.dumps(elements, indent=4, ensure_ascii=False)))
-    return(data)
+        print((json.dumps(data, indent=4, ensure_ascii=False)))
+        return(data)
 
-print(pretty_print_json(data))
+if __name__ == '__main__':
+    print(pretty_print_json(data))
